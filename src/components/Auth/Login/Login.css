@@ -1,0 +1,114 @@
+.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background-color: #F0F2F5;
+}
+
+.loginContentBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    width: 60%;
+    padding-right: 7rem;
+}
+
+.title h1 {
+    color: #1877F2;
+    font-weight: 600;
+    font-size: 4rem;
+}
+
+.title p {
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    width: 50%;
+}
+
+.inputFieldLogin {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFFFFF;
+    padding: 1rem;
+    margin: 2rem 0;
+    height: 320px;
+    border-radius: 15px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.form input,
+.form button {
+    padding: 0.8rem;
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+    border: 1px solid rgb(202, 202, 202);
+}
+
+.form input {
+    width: 90%;
+}
+
+.form input:focus {
+    outline: 2px solid #40a0ff;
+
+}
+
+.btn-primary {
+    margin-top: 0.5rem;
+    font-size: 1.3rem;
+    width: 97%;
+}
+
+.inputFieldLogin a {
+    margin: 1rem 0;
+    text-align: center;
+    color: #1877F2;
+}
+
+.inputFieldLogin a:hover {
+    text-decoration: underline;
+}
+
+.btn-secondary {
+    font-size: 1.1rem;
+    margin-top: 1.5rem;
+    width: 55%;
+}
+
+.btn-primary:hover {
+    background-color: rgb(0, 88, 204);
+}
+
+hr {
+    width: 100%;
+    border-top: 1px solid rgb(223, 223, 223);
+}
+
+
+.form>p {
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+.form>p>span {
+    font-weight: bold;
+}
