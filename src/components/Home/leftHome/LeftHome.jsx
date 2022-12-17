@@ -1,17 +1,35 @@
 import React from "react";
-import dp from "../../../img/dp.jpg";
 import Footer from "../../UI/Footer";
 import "./LeftHome.css";
+import { useSelector, useDispatch } from "react-redux";
+import { Link, useLocation } from "react-router-dom";
+import DP from "../../UI/dp/DP";
 
 const LeftHome = () => {
+  const dispatch = useDispatch();
+
+  const location = useLocation();
+
+  var addLeftNavBar;
+
+  if (location.pathname === "/") {
+    addLeftNavBar = "";
+  } else {
+    addLeftNavBar = "leftNavbar";
+  }
+
   return (
-    <div className="leftHome">
+    <div className={`leftHome ${addLeftNavBar && "leftNavbar"}`}>
       <ul>
         <li>
           <i className="fa-solid fa-house"></i> <p>Home</p>
         </li>
         <li>
-          <img src={dp} alt="profile picture" /> <p>Asif Imam</p>
+          <Link to="/profile" className="flex center">
+            <DP />
+            {/* <img src={dp} alt="profile picture" /> */}
+            <p>Asif Imam</p>
+          </Link>
         </li>
         <hr />
         <li>

@@ -5,7 +5,7 @@
     align-items: center;
     height: 100vh;
     width: 100%;
-    background-color: #F0F2F5;
+    background-color: var(--body-bg-color);
 }
 
 .loginContentBox {
@@ -47,7 +47,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #FFFFFF;
+    background-color: var(--card-bg-color);
     padding: 1rem;
     margin: 2rem 0;
     height: 320px;
@@ -55,12 +55,25 @@
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 
+.form input {
+    margin-top: 0.5rem;
+}
+
 .form input,
 .form button {
     padding: 0.8rem;
     border-radius: 8px;
-    margin-bottom: 0.5rem;
-    border: 1px solid rgb(202, 202, 202);
+    color: white;
+    border: var(--input-border-color);
+}
+
+.form input {
+    background-color: var(--body-bg-color);
+}
+
+.inputFieldLogin a,
+button {
+    width: 97%;
 }
 
 .form input {
@@ -75,7 +88,7 @@
 .btn-primary {
     margin-top: 0.5rem;
     font-size: 1.3rem;
-    width: 97%;
+    width: 100%;
 }
 
 .inputFieldLogin a {
@@ -100,7 +113,7 @@
 
 hr {
     width: 100%;
-    border-top: 1px solid rgb(223, 223, 223);
+    border-top: var(--input-border-color);
 }
 
 

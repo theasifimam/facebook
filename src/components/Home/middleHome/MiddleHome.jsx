@@ -1,7 +1,6 @@
 import React from "react";
 import "./MiddleHome.css";
 import dp from "../../../img/story2.jpg";
-import dpicture from "../../../img/dp.jpg";
 import { postObj } from "../../../assets/postObj";
 import DP from "../../UI/dp/DP";
 import { storyObj } from "../../../assets/postObj";
@@ -70,7 +69,7 @@ const MiddleHome = (props) => {
 
       <div className="card uploadPost">
         <div id="write">
-          <img src={dpicture} alt="profile picture" />{" "}
+          <DP />
           <input type="text" placeholder="What's on your mind, Asif!" />
         </div>
         <hr />
@@ -81,7 +80,7 @@ const MiddleHome = (props) => {
           <div className="type">
             <i className="fa-solid fa-photo-film" id="photoPost"></i>Photo/Video
           </div>
-          <div className="type">
+          <div className="type" id="feelingActivity">
             <i className="fa-regular fa-face-laugh-beam" id="feelingPost"></i>
             Feeling/Activity
           </div>
@@ -93,7 +92,9 @@ const MiddleHome = (props) => {
           <div className="post card" key={post.id}>
             <div className="name">
               {/* <img src={dpicture} alt="profile picture" /> */}
-              <DP />
+              <div className="postDP">
+                <img src={post.img} alt={post.caption} />
+              </div>
               <div className="nameDiv">
                 <h4>{post.name}</h4>
               </div>

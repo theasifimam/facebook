@@ -2,18 +2,20 @@
     justify-content: center;
     align-items: center;
     width: 320px;
-    background-color: white;
+    background-color: var(--card-bg-color);
     box-shadow: var(--shadow);
     border-radius: 15px;
     padding: 1rem;
-    position: absolute;
+    position: fixed;
     top: 60px;
-    z-index: 5;
+    z-index: 15;
     right: 20px;
 }
 
-.card {
+
+.settings>.card {
     margin: 0.5rem;
+    background-color: var(--body-bg-color);
 }
 
 .c2 {
@@ -51,19 +53,32 @@
 }
 
 .control:hover {
-    background-color: rgb(230, 230, 230);
+    background-color: var(--hover-color);
 }
 
 .control-i {
-    background-color: rgb(214, 214, 214);
+    background-color: var(--body-bg-color);
     padding: 0.6rem;
     border-radius: 50%;
     font-size: 1.2rem;
     margin-right: 1rem;
 }
 
+.control i {
+    color: var(--p-color);
+}
+
 .control>h6 {
     font-weight: 500;
-    width: 70%;
+    width: 100%;
     font-size: 0.9rem;
+    color: var(--p-color);
+
+}
+
+.control>a>h6 {
+    font-weight: 500;
+    width: 100%;
+    font-size: 0.9rem;
+    color: var(--p-color);
 }

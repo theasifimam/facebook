@@ -1,7 +1,18 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Login.css";
+import { useDispatch, useSelector } from "react-redux";
+import Signup from "../Signup/Signup";
 
 const Login = (props) => {
+  const dispatch = useDispatch();
+
+  const showSignUpHandler = () => {
+    dispatch({ type: "SHOWSIGNUP" });
+  };
+
+  const showSignUp = useSelector((state) => state.showSignUp);
+
   return (
     <>
       <div className="container">
@@ -17,10 +28,13 @@ const Login = (props) => {
             <div className="inputFieldLogin">
               <input type="text" placeholder="Email address or phone number" />
               <input type="password" placeholder="Password" />
-              <button className="btn-primary">Log in</button>
+
+              <Link to="/">
+                <button className="btn-primary">Log in</button>
+              </Link>
               <a>Forgotten password?</a>
               <hr />
-              <button className="btn-secondary" onClick={props.showSignUp}>
+              <button className="btn-secondary" onClick={showSignUpHandler}>
                 Create New Account
               </button>
             </div>
@@ -30,6 +44,8 @@ const Login = (props) => {
           </div>
         </div>
       </div>
+
+      {showSignUp && <Signup />}
     </>
   );
 };

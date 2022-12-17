@@ -11,12 +11,12 @@ const Notification = () => {
       </div>
 
       <div className="control3 flex">
-        <button>All</button>
+        <button active>All</button>
         <button>Unread</button>
       </div>
 
       <div className="newNotifications">
-        <p>New Notification</p>
+        <h5>New</h5>
         <div className="notification">
           <ul>
             <li className="flex">
@@ -51,7 +51,7 @@ const Notification = () => {
       </div>
 
       <div className="earlierNotifications">
-        <p>Earlier Notification</p>
+        <h5>Earlier</h5>
         <div className="notification">
           <ul>
             <li className="flex">

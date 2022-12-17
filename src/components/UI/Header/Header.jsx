@@ -4,41 +4,46 @@ import dp from "../../../img/dp.jpg";
 import Settings from "../settings/Settings";
 import Notification from "../notification/Notification";
 import Chats from "../chats/Chats";
+import { useSelector, useDispatch } from "react-redux";
+import { Link } from "react-router-dom";
 
-const Header = () => {
-  const [showLogin, setShowLogin] = useState(false);
-  const [showNotice, setShowNotice] = useState(false);
-  const [showMessages, setShowMessages] = useState(false);
+const Header = (props) => {
+  const notification = useSelector((state) => state.notification);
+
+  const message = useSelector((state) => state.message);
+  const login = useSelector((state) => state.login);
+
+  const dispatch = useDispatch();
 
   const showMessagesHandle = () => {
-    setShowMessages(!showMessages);
-    setShowLogin(false);
-    setShowNotice(false);
+    dispatch({ type: "message" });
   };
 
   const showNotificationHandle = () => {
-    setShowNotice(!showNotice);
-    setShowMessages(false);
-    setShowLogin(false);
+    dispatch({ type: "notification" });
   };
 
   const loginClickHandle = () => {
-    setShowLogin(!showLogin);
-    setShowNotice(false);
-    setShowMessages(false);
+    dispatch({ type: "login" });
   };
 
   return (
     <>
       <div className="header">
         <div id="logo">
-          <h1>facebook</h1>
+          <Link exact to="/">
+            <h1>facebook</h1>
+          </Link>
         </div>
         <div className="search flex-c">
           <i className="fa-solid fa-magnifying-glass"></i>
           <input type="search" placeholder="Search Facebook" />
         </div>
         <div className="hControls flex-c">
+          <i
+            className="fa-sharp fa-solid fa-circle-half-stroke"
+            onClick={props.toggleTheme}
+          ></i>
           <i
             className="fa-brands fa-facebook-messenger"
             onClick={showMessagesHandle}
@@ -52,9 +57,9 @@ const Header = () => {
           </a>
         </div>
       </div>
-      {showMessages && <Chats />}
-      {showLogin && <Settings />}
-      {showNotice && <Notification />}
+      {message && <Chats />}
+      {login && <Settings />}
+      {notification && <Notification />}
     </>
   );
 };

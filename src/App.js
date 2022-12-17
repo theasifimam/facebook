@@ -1,24 +1,68 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { Route, Switch } from "react-router-dom";
 import "./App.css";
 import Login from "./components/Auth/Login/Login";
-import Signup from "./components/Auth/Signup/Signup";
-import Home from "./components/pages/Home";
+import ContentHome from "./components/pages/ContentHome";
+import Layout from "./components/pages/Layout/Layout";
+import Profile from "./components/pages/Profile";
 
 function App() {
-  const [showSignUp, setShowSignUp] = useState(false);
-  const showSignUpHandler = () => {
-    setShowSignUp(true);
+  const [theme, setTheme] = useState(
+    localStorage.getItem("theme") || "light-theme"
+  );
+
+  const [toggleClicked, setToggleClicked] = useState(false);
+
+  let themeMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+  const toggleTheme = () => {
+    setToggleClicked(true);
+    if (theme === "light-theme") {
+      setTheme("dark-theme");
+    } else {
+      setTheme("light-theme");
+    }
   };
 
-  const hideSignUpHandler = () => {
-    setShowSignUp(false);
-  };
+  useEffect(() => {
+    if (toggleClicked) {
+      localStorage.setItem("theme", theme);
+    }
+    document.body.className = theme;
+  }, [theme]);
+
+  useEffect(() => {
+    const value = localStorage.getItem("theme");
+    if (value === "light-theme" || value === "dark-theme") {
+      return;
+    } else {
+      if (themeMode) {
+        setTheme("dark-theme");
+      } else {
+        setTheme("light-theme");
+      }
+      document.body.className = theme;
+    }
+  }, [theme]);
+
   return (
     <React.Fragment>
-      {/* <Login showSignUp={showSignUpHandler} /> */}
+      <Switch>
+        <Route path="/login" exact>
+          <Login />
+          {/* <Login showSignUp={showSignUpHandler} /> */}
+          {/* {showSignUp && <Signup hideSignUpHandler={hideSignUpHandler} />} */}
+        </Route>
 
-      {showSignUp && <Signup hideSignUpHandler={hideSignUpHandler} />}
-      <Home />
+        <Layout clickHandler={toggleTheme}>
+          <Route path="/" exact>
+            <ContentHome />
+          </Route>
+          <Route path="/profile" exact>
+            <Profile />
+          </Route>
+        </Layout>
+      </Switch>
     </React.Fragment>
   );
 }

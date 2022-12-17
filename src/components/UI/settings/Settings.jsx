@@ -2,8 +2,16 @@ import React from "react";
 import DP from "../dp/DP";
 import "./Settings.css";
 import Footer from "../Footer";
+import { Link } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
 
 const Settings = () => {
+  const login = useSelector((state) => state.login);
+  const dispatch = useDispatch();
+
+  const loginClickHandle = () => {
+    dispatch({ type: "login" });
+  };
   return (
     <div className="settings flex-col">
       <div className="card c2">
@@ -40,8 +48,10 @@ const Settings = () => {
         </div>
 
         <div className="control flex">
-          <i className="fa-solid fa-right-from-bracket control-i"></i>
-          <h6>Logout</h6>
+          <Link className="flex center" onClick={loginClickHandle} to="/login">
+            <i className="fa-solid fa-right-from-bracket control-i"></i>
+            <h6>Logout</h6>
+          </Link>
         </div>
       </div>
       <Footer />
