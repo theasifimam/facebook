@@ -345,4 +345,10 @@ export const friendsInfoObj = [
     worksAt: "Cipla Pharmaceuticals",
     img: "https://images.unsplash.com/photo-1513956589380-bad6acb9b9d4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
   },
+  {
+    id: 19,
+    name: "Maleeha Imam",
+    worksAt: "AIIMS Darbhanga",
+    img: "https://images.unsplash.com/photo-1514926255734-79b2e9ef2501?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
+  },
 ];
