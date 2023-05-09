@@ -1,0 +1,432 @@
+.profileHeaderContainer {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    /* align-items: center; */
+    box-shadow: var(--shadow);
+    width: 100%;
+    color: grey;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 0px 2px 0px, rgba(60, 64, 67, 0.15) 0px 0px 3px 1px;
+}
+
+.profileHeader {
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    width: 100%;
+    z-index: 2;
+    background-color: var(--card-bg-color);
+}
+
+/* 
+.leftNavbar>img {
+    margin-left: 1rem;
+} */
+
+.coverImage {
+    background-image: var(---profile-cover-gradient),
+        url('../../img/coverpic.jpg');
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 22rem;
+    border-radius: 0 0 10px 10px;
+    /* -webkit-filter: blur(100%);
+    -moz-filter: blur(100%);
+    -o-filter: blur(100%);
+    -ms-filter: blur(100%); */
+    /* position: relative; */
+    overflow: hidden;
+
+}
+
+.coverImage>.cpcontainer {
+    width: 55rem;
+    height: 100%;
+    background-image: var(--profile-cover-gradient);
+    background-image: url(../../img/coverpic.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    border-radius: 0 0 10px 10px;
+    z-index: 0;
+
+    /* overflow: hidden; */
+    /* -webkit-border-radius: 10px;
+    border-radius: 0 0 10px 10px;
+    -moz-border-radius: 10px; */
+}
+
+
+.editCoverBtn {
+    width: 10rem;
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    z-index: 99;
+}
+
+.editCoverPhoto {
+    padding: 0.7rem;
+    border-radius: 8px;
+    border: none;
+    font-weight: bold;
+    font-size: 0.8rem;
+    z-index: 14;
+    background-color: var(--card-bg-color);
+}
+
+.editCoverPhoto:hover {
+    background-color: var(--hover-color);
+    cursor: pointer;
+}
+
+.myProfileName {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+    height: auto;
+    z-index: 1;
+    color: black;
+}
+
+.profilePicture {
+    width: 10%;
+    position: relative;
+    bottom: 10%;
+    left: 5%;
+    z-index: 32;
+}
+
+.profilePicture>img {
+    /* position: absolute; */
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 5px solid var(--card-bg-color);
+}
+
+.myInfo {
+    padding-top: 1rem;
+    width: 100%;
+    padding-left: 10rem;
+}
+
+.editInfo {
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    height: 2rem;
+}
+
+.friendsPics {
+    display: flex;
+    overflow: visible;
+}
+
+.friendsPics>.dp> {
+    overflow: visible;
+    width: 50%;
+    z-index: auto;
+}
+
+.friendsPics>.dp>img {
+    width: 100%;
+}
+
+.profileHeader>hr {
+    width: 55rem;
+}
+
+.myProfileBtn>button {
+    font-size: 1rem;
+    padding: 0.6rem 0.5rem;
+    width: 9rem;
+    border-radius: 10px;
+    border: none;
+    font-size: 0.9rem;
+    font-weight: normal;
+    margin: 0 0.3rem;
+}
+
+
+
+
+
+.profileNavBar {
+    display: flex;
+    justify-content: center;
+    /* margin-top: 2.5rem; */
+    background-color: var(--card-bg-color);
+    width: 100%;
+    position: sticky;
+    top: 55px;
+    z-index: 1;
+    margin-left: -1px;
+    color: grey;
+    box-shadow: var(--shadow);
+    overflow: auto;
+}
+
+.profileNavBar::-webkit-scrollbar {
+    display: none;
+}
+
+.profileNavBar>ul {
+    width: 60%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    /* height: 5rem; */
+    list-style-type: none;
+    overflow: auto;
+
+}
+
+.profileNavBar>ul::-webkit-scrollbar {
+    display: none;
+}
+
+.profileNavBar ul>li {
+    padding: 1rem 1rem;
+}
+
+.profileNavBar ul>li:hover {
+    background-color: var(--hover-color);
+    cursor: pointer;
+}
+
+.underHeaderSection {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+/* Left Profile Section */
+
+.leftProfileSection {
+    width: 30%;
+    height: 100vh;
+    overflow: auto;
+    position: sticky;
+    top: 0;
+    padding-bottom: 2rem;
+    /* z-index: -7; */
+}
+
+
+.leftProfileSection::-webkit-scrollbar {
+    display: none;
+}
+
+.userIntroCard {
+    width: 87%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.userIntroCard>h3 {
+    text-align: left;
+    width: 100%;
+}
+
+.userIntroCard>p {
+    color: grey;
+    line-height: 1rem;
+    font-size: .9rem;
+}
+
+.userIntroCard .btn-3 {
+    margin: 0.5rem 0;
+    font-size: 1rem;
+    padding: 0.6rem 0.5rem;
+    width: 100%;
+    border-radius: 10px;
+    border: none;
+    font-size: 0.85rem;
+    font-weight: bold;
+    background-color: var(--button-color);
+    text-align: center;
+}
+
+.userDetailList>p {
+    font-size: 0.9rem;
+    padding: 0.8rem 0;
+    color: grey;
+}
+
+.userDetailList>p>i {
+    font-size: 1.2rem;
+    color: grey;
+    margin-right: 0.7rem;
+}
+
+.userDetailList>p>span {
+    font-weight: bold;
+    color: var(--h1-color);
+}
+
+.userInterests {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+.userInterests>span {
+    border: 1px solid rgb(212, 212, 212);
+    border-radius: 20px;
+    margin: 0.2rem;
+    padding: 0.2rem 0.5rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.userInterests span:hover {
+    background-color: rgb(202, 202, 202);
+    cursor: pointer;
+}
+
+.profilePhotosCard {
+    width: 87%;
+}
+
+.profilePhotosCard>.heading {
+    height: 2rem;
+    text-align: right;
+}
+
+.profilePhotosCard>.heading>span {
+    color: var(--accent);
+    cursor: pointer;
+    margin: 0;
+}
+
+.profilePhotosCard>.photosDiv {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: initial;
+    align-items: center;
+    width: 100%;
+}
+
+
+.photosDiv>img {
+    width: 30%;
+    height: 100px;
+    margin-top: 0.8rem;
+}
+
+.btn-3>i {
+    margin-right: 0.2rem;
+}
+
+.btn-3 {
+    background-color: var(--button-color);
+}
+
+.btn-3:hover {
+    background-color: rgb(197, 197, 197);
+    cursor: pointer;
+}
+
+
+/* Right Profile Section */
+
+.rightProfileSection {
+    width: 50%;
+    z-index: -4;
+    /* height: 100vh; */
+    overflow-y: auto;
+}
+
+.rightProfileSection::-webkit-scrollbar {
+    display: none;
+}
+
+.rightProfileSection>.uploadPost {
+    width: 87%;
+    font-size: 0.5rem;
+}
+
+.rightProfileSection .uploadPost .type,
+.rightProfileSection .uploadPost .type i {
+    font-size: 0.85rem;
+}
+
+.rightProfileSection>.post {
+    width: 87%;
+}
+
+@media screen and (max-width: 960px) {
+
+    .profileHeaderContainer {
+        width: 90%;
+        overflow: hidden;
+    }
+
+    .underHeaderSection {
+        flex-direction: column;
+        /* justify-content: center; */
+        align-items: center;
+    }
+
+    .leftProfileSection {
+        width: 95%;
+        position: static;
+        height: auto;
+        text-align: left;
+    }
+
+    .profileName {
+        position: relative;
+    }
+
+    .profilePicture {
+        top: -20%;
+        left: 0;
+        justify-content: center;
+        align-items: center;
+        margin-right: 10rem !important;
+        padding: 0;
+    }
+
+    .rightProfileSection {
+        width: 95%;
+        position: static;
+        height: auto;
+    }
+
+    .leftNavbar {
+        align-items: top;
+        padding-top: 0;
+        justify-content: flex-start;
+        height: 110vh;
+        width: 5% !important;
+    }
+
+    .myInfo {
+        width: 80%;
+        padding: 0;
+        padding-bottom: 4rem;
+        /* flex-direction: column; */
+        justify-content: center;
+        align-items: center;
+        margin-top: -4rem !important;
+    }
+
+    .editInfo {
+        flex-direction: column;
+        margin: 0;
+        /* padding-bottom: 6rem; */
+    }
+
+}

@@ -1,0 +1,84 @@
+.settings {
+    justify-content: center;
+    align-items: center;
+    width: 320px;
+    background-color: var(--card-bg-color);
+    box-shadow: var(--shadow);
+    border-radius: 15px;
+    padding: 1rem;
+    position: fixed;
+    top: 60px;
+    z-index: 15;
+    right: 20px;
+}
+
+
+.settings>.card {
+    margin: 0.5rem;
+    background-color: var(--body-bg-color);
+}
+
+.c2 {
+    width: 90%;
+}
+
+.profile {
+    width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 50px;
+}
+
+.profile>h1 {
+    width: 70%;
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+.card>p {
+    color: var(--accent);
+    text-align: left;
+    margin-top: 0.5rem;
+}
+
+.controls {
+    width: 100%;
+}
+
+.control {
+    padding: 0.4rem 1rem;
+    width: 90%;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.control:hover {
+    background-color: var(--hover-color);
+}
+
+.control-i {
+    background-color: var(--body-bg-color);
+    padding: 0.6rem;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    margin-right: 1rem;
+}
+
+.control i {
+    color: var(--p-color);
+}
+
+.control>h6 {
+    font-weight: 500;
+    width: 100%;
+    font-size: 0.9rem;
+    color: var(--p-color);
+
+}
+
+.control>a>h6 {
+    font-weight: 500;
+    width: 100%;
+    font-size: 0.9rem;
+    color: var(--p-color);
+}
